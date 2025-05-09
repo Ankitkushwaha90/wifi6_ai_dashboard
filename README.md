@@ -8,7 +8,7 @@ description: Real-time AI-powered dashboard for monitoring Wi-Fi 6 traffic and d
 Real-time AI-powered dashboard that sniffs **Wi-Fi 6 packets**, detects threats using a **GPU-accelerated PyTorch model**, and displays results via a **live Flask web app**.
 
 ---
-```yaml
+```bash
 ## 📁 Project Structure
 
 wifi6_ai_dashboard/
