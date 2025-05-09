@@ -58,3 +58,42 @@ python3 app.py
 ```
 Then open http://127.0.0.1:5000 in your browser.
 📊 The dashboard auto-updates every 5 seconds.
+
+## 📂 File Breakdown
+
+### `sniff.py` – Wi-Fi 6 Sniffer
+- Captures packets from Wi-Fi using **Scapy**
+- Stores basic metadata: **MAC addresses**, **signal strength**, **type/subtype**
+
+### `model.py` – AI Threat Detection (GPU)
+- Normalizes data and uses a **PyTorch model** to classify threats
+- Utilizes **CUDA** for GPU-accelerated inference
+- Labels packets as:
+  - `0` — Benign
+  - `1` — Threat
+
+### `app.py` – Flask App
+- Launches a **threaded sniffer** and **AI inference loop**
+- Displays a **live HTML dashboard** of suspicious packets
+
+### `dashboard.html`
+- A **simple and fast-loading dashboard**
+- Uses **auto-refresh** and **table formatting** for live data
+
+---
+
+## 📈 Future Enhancements
+
+- ✅ Integrate **SQLite** or **MongoDB** for storing packet history
+- ✅ Replace simulated model with a real trained model like **AWID** or **CIC-IDS2017**
+- ✅ Add **GeoIP** lookup and **MAC vendor** identification
+- ✅ Enhance detection with **attack category classification** (e.g., DoS, Spoofing, Evil Twin)
+
+---
+
+## ⚠️ Disclaimer
+
+> This tool is intended for **educational** and **ethical hacking** purposes **only**.  
+> Do **not** use it on unauthorized networks.  
+> Always ensure you have **explicit permission** before running any scans or monitoring.
+
