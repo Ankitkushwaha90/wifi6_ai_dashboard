@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wi-Fi 6 AI Threat Dashboard</title>
+    <meta http-equiv="refresh" content="5">
+    <style>
+        body { font-family: Arial; background: #111; color: #fff; padding: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #444; padding: 8px; }
+        th { background-color: #222; }
+    </style>
+</head>
+<body>
+    <h2>⚠️ Detected Threats (Updated Every 5s)</h2>
+    <table>
+        <tr><th>MAC Source</th><th>MAC Dest</th><th>Signal</th><th>Type</th><th>Subtype</th></tr>
+        {% for row in threats %}
+        <tr>
+            <td>{{ row.mac_src }}</td>
+            <td>{{ row.mac_dst }}</td>
+            <td>{{ row.signal_strength }}</td>
+            <td>{{ row.pkt_type }}</td>
+            <td>{{ row.pkt_subtype }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
