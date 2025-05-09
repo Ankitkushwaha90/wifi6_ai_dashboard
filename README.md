@@ -8,9 +8,9 @@ description: Real-time AI-powered dashboard for monitoring Wi-Fi 6 traffic and d
 Real-time AI-powered dashboard that sniffs **Wi-Fi 6 packets**, detects threats using a **GPU-accelerated PyTorch model**, and displays results via a **live Flask web app**.
 
 ---
-```bash
-## 📁 Project Structure
 
+## 📁 Project Structure
+```bash
 wifi6_ai_dashboard/
 ├── app.py # Flask web server
 ├── model.py # GPU-based threat detection model
@@ -43,20 +43,18 @@ Ensure your Wi-Fi adapter supports monitor mode (e.g., Alfa AWUS036ACH).
 
 Set it to monitor mode:
 
-bash
-Copy
-Edit
+```bash
 sudo airmon-ng start wlan0
-🚀 Run the Dashboard
-bash
-Copy
-Edit
+```
+## 🚀 Run the Dashboard
+```bash
 # Clone the repo
 git clone https://github.com/yourname/wifi6_ai_dashboard.git
 cd wifi6_ai_dashboard
 
+
 # Run the Flask app
 python3 app.py
+```
 Then open http://127.0.0.1:5000 in your browser.
-
 📊 The dashboard auto-updates every 5 seconds.
